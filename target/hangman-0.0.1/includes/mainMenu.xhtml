@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<!--  
+ * 
+ * @author Dann - Dangelo Santana
+ * @professor Lounis Zaidi
+ * @subject OPJE - v11-Project2005-0902
+ *
+ */-->
+	
+	<h:form>	
+		<!-- MENU -->
+		<p:menubar>
+			<p:submenu label="File">
+				<p:menuitem value="Single Player" onclick="PF('dgnewgame').show();"
+					action="#{MBhangman.prepareGame}" update="playertxbx" />
+				<p:menuitem value="Dual Player" />
+				<p:menuitem value="Sair" />
+			</p:submenu>
+
+			<p:submenu label="SignUp">
+				<p:menuitem value="To Do" />
+			</p:submenu>
+
+			<p:submenu label="Help">
+				<p:menuitem value="About Hangman" onclick="PF('dgAboutit').show();" />
+			</p:submenu>
+		</p:menubar>
+				<p:panel id="logoPanel">
+			<h:graphicImage value="/resources/images/hmheader.png" alt="logo" />
+		</p:panel>
+
+		<!--  about us -->
+		<p:dialog widgetVar="dgAboutit" id="abouttxt" closable="true"
+			draggable="false" resizable="false" width="750px" height="750px"
+			header="About Hangman Game!!" closeOnEscape="true">
+
+			<h1>Hangman - Project Assignment I</h1>
+			<h:panelGrid columns="2" width="250" styleClass="center-table"></h:panelGrid>
+			<h2>
+				<p:outputLabel value="Summary:  " styleClass="aboutusTitle" />
+			</h2>
+			<p>
+				<p:outputLabel
+					value="This project is part of CDI college, programmer analyst
+				/Internet solutions developer LEA.9c " />
+			</p>
+			<p>
+				<p:outputLabel
+					value="Level: OPJE - Object Oriented
+				Programming Java, project OPJEV1.1 2005-0902. " />
+			</p>
+			<p>
+				<p:outputLabel> The present content aims demonstrate skills and knowledges
+				acquired until March 2017 by Dann - Dangelo Santana.</p:outputLabel>
+			</p>
+
+
+			<h2>
+				<p:outputLabel>Technology References and README</p:outputLabel>
+			</h2>
+			<p>
+				<p:outputLabel>JAVA, JSF, CSS, XHTML, Autodesk Inventor (images) HangmanGame,
+				facelets, JavaEE, Primefaces, Maven, TomcatV8.0, java core.</p:outputLabel>
+			</p>
+			<p>
+				<p:outputLabel>  CDI college, programmer analyst / Internet solutions developer
+				Student: Dangelo Trindade Santana (dangelosantana@hotmail.com)
+				Professor: Lounis Zaidi Montreal - March, 2017</p:outputLabel>
+			</p>
+
+
+			<h2>
+				<p:outputLabel>Hangman Origin</p:outputLabel>
+			</h2>
+			<p>
+				<p:outputLabel>"The origins of Hangman are obscure meaning not discovered,
+						but it seems to have arisen in Victorian times," says Tony
+						Augarde, author of The Oxford Guide to Word Games. The game is
+						mentioned in Alice Bertha Gomme's "Traditional Games" in 1894
+						under the name "Birds, Beasts and Fishes."</p:outputLabel>
+			</p>
+			<h2>
+				<p:outputLabel>Rules and Instruction</p:outputLabel>
+			</h2>
+			<ol>
+				<li><p:outputLabel>Menu File\ New game</p:outputLabel></li>
+				<li><p:outputLabel>Fill out you nickname</p:outputLabel></li>
+				<li><p:outputLabel>You have to guess the word hided on display rack</p:outputLabel></li>
+				<li><p:outputLabel>Each hit earns 100pts</p:outputLabel></li>
+				<li><p:outputLabel>Each mistake loose display a body part</p:outputLabel></li>
+				<li><p:outputLabel>You should not exceed 6 mistakes</p:outputLabel></li>
+				<li><p:outputLabel>6 mistakes you loose and lost all points</p:outputLabel></li>
+				<li><p:outputLabel>You can choose play again, but is all in, Always!!!</p:outputLabel></li>
+				<li><p:outputLabel>Good luck!!</p:outputLabel></li>
+
+			</ol>
+			<h2>
+				<p:outputLabel>LIFE IS GOOD +++++ LIFE IS GOOD  +++++   LIFE IS GOOD  +++++   LIFE IS GOOD!!  </p:outputLabel>
+			</h2>
+
+		</p:dialog>
+		<!-- new game dialog box -->
+
+		<p:dialog widgetVar="dgnewgame" id="newPlayerDialogBox"
+			closable="false" draggable="false" resizable="false" width="265px"
+			height="80px" header="Welcome to Hangman Game!!" closeOnEscape="true">
+			<h:panelGrid id="infopanel" columns="2" width="250"
+				styleClass="center-table">
+				<p:outputLabel value="Name: " />
+				<p:inputText value="#{MBhangman.player}" id="playertxbx" />
+			</h:panelGrid>
+
+			<!--  <f:facet name="footer">-->
+			<h:panelGrid columns="2" id="pnButton" styleClass="gdbt">
+				<p:commandButton value="  Play  "
+					actionListener="#{MBhangman.playGame}"
+					oncomplete="PF('dgnewgame').hide();" update="@all" />
+				<p:commandButton value="Cancel" action="#{MBhangman.prepareGame}"
+					onclick="PF('dgnewgame').hide();" />
+			</h:panelGrid>
+			<!-- </f:facet> -->
+
+		</p:dialog>
+	</h:form>
+</ui:composition>

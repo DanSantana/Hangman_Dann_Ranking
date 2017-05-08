@@ -1,0 +1,80 @@
+@CHARSET "ISO-8859-1";
+
+.ui-layout-north {
+	z-index: 20 !important;
+	overflow: visible !important;;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+	overflow: visible !important;
+}
+
+.ui-widget, .ui-widget .ui-widget {
+	font-size: 13px !important;
+}
+
+#mypanel {
+	margin-left: auto;
+	margin-right: auto
+}
+
+.ui-layout-center #key {
+	padding: 5px;
+}
+.container {
+		vertical-align: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container td {
+	vertical-align: top;
+	text-align: center;
+}
+#frmuserData{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+#frmuserData keyboardPanel_content{
+		margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.ui-panel-content keyboardPanel{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.ui-widget-content keyboardPanel{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+.centered {
+	margin-right: auto;
+	margin-left: auto;
+	}
+.txb{
+	text-align: center;
+}
+
+#pnButton{
+	vertical-align: middle;
+	text-align: right;
+	
+}
+.gdbt{
+	padding-top: 6px;
+	text-align: right;
+	margin-left: 70px;
+}
+.gdbt2{
+	padding: 10px;
+	text-align: center;
+	margin-left: 180px;
+}
+
+

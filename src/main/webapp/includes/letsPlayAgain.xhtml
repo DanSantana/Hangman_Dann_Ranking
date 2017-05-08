@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<!--  
+ * 
+ * @author Dann - Dangelo Santana
+ * @professor Lounis Zaidi
+ * @subject OPJE - v11-Project2005-0902
+ *
+ */-->
+	
+	<h:form id="pagainfrm" >
+		<p:panel id="playAgain" visible="#{MBhangman.playAgain}">
+			<h1>
+				<p:outputLabel value="Hey ! " />
+				<p:outputLabel value="#{MBhangman.player}" />
+				<br />
+				<p:outputLabel value="Lets Play Again!!???" />
+			</h1>
+			<h:panelGrid columns="2" styleClass="gdbt2" >
+				<p:commandButton value="YES" actionListener="#{MBhangman.takeAction()}" update="@all"/>
+				<p:commandButton value="Maybe Later" actionListener="#{MBhangman.maybeLater()}" update="@all" />
+			</h:panelGrid>
+
+		</p:panel>
+	</h:form>
+</ui:composition>

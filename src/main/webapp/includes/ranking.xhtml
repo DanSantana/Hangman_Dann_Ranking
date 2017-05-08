@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<!--  
+ * 
+ * @author Dann - Dangelo Santana
+ * @professor Lounis Zaidi
+ * @subject OPJE - v11-Project2005-0902
+ *
+ */-->
+	<h:form >
+		<p:panel id="ranking" styleClass="rkpanel" header="hangman Ranking" visible="#{MBhangman.rankingVisible}">
+			<p:dataTable emptyMessage="There in no data found"
+				value="#{MBhangman.itens}" var="item" rowIndexVar="rowindex"
+				styleClass="tableClass">
+				<p:column headerText="#" styleClass="short">
+       				#{rowindex+1}
+    			</p:column>
+				<p:column headerText="User Name" styleClass=" normal">
+					<h:outputText value="#{item.userName}" />
+				</p:column>
+				<p:column headerText="Highest Score" styleClass=" normal">
+					<h:outputText value="#{item.highestScore}" />
+				</p:column>
+
+				<p:column headerText="Victories" styleClass="short">
+					<h:outputText value="#{item.victories}" />
+				</p:column>
+				<p:column headerText="Defeats" styleClass="short">
+					<h:outputText value="#{item.defeats}" />
+				</p:column>
+				<p:column headerText="Total Score" styleClass=" normal">
+					<h:outputText value="#{item.sumScore}" />
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+	</h:form>
+</ui:composition>

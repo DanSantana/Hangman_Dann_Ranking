@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<!--  
+ * 
+ * @author Dann - Dangelo Santana
+ * @professor Lounis Zaidi
+ * @subject OPJE - v11-Project2005-0902
+ *
+ */-->
+	<p:panel id="pnlUser" header="Player Information" >
+		<p:outputLabel value="  Player: " />
+		<p:inputText readonly="true" placeholder="Player" size="15" maxlength="15" value="#{MBhangman.player}"/>		
+		<p:outputLabel value="  Score: " />
+		<p:inputText readonly="true" placeholder="0000" size="15"	maxlength="15"  value="#{MBhangman.score}"/>
+			<p:outputLabel value=""/>
+	</p:panel>
+</ui:composition>

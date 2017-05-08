@@ -1,0 +1,3 @@
+Install J;ava JDK 8 121
+on eclipse
+Set Workspace (or create anew one)

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<!--  
+ * 
+ * @author Dann - Dangelo Santana
+ * @professor Lounis Zaidi
+ * @subject OPJE - v11-Project2005-0902
+ *
+ */--><p:panel>
+	<h:panelGrid columns="3" id="bodygame" styleClass="container">
+	
+	<h:form id="frmPayer2">
+			<ui:include src="/includes/userInfo.xhtml" />
+			<p:panel id="imagesP2">
+				<h:graphicImage value="#{MBhangman.hmImageSrc}"
+					styleClass="hangImage" />
+			</p:panel>
+		</h:form>
+	
+	
+		<h:form id="frmuserData">
+			<p:panel id="wordPanel" header="Hangman dual Player Word Grid">
+				<ui:include src="/includes/guessLetter.xhtml" />
+			</p:panel>
+			<h:panelGrid columns="2" id="superKeyboard" />
+			<ui:include src="/includes/keyboard.xhtml" />
+			<p:panel>
+				<p:outputLabel value="Hey, you should not exceed 6 mistakes," />
+				<br />
+				<p:outputLabel value="... Please be careful!!" />
+				<br />
+				<p:outputLabel id="myTalk" value="#{MBhangman.mistakes}" />
+				<p:outputLabel value=" of 6 mistakes" />
+			</p:panel>
+			<ui:include src="/includes/letsPlayAgain.xhtml" />
+			
+			<ui:include src="/includes/highestScore.xhtml" />
+		</h:form>
+		
+		<h:form id="frmPayer1">
+			<ui:include src="/includes/userInfo.xhtml" />
+			<p:panel id="images">
+				<h:graphicImage value="#{MBhangman.hmImageSrc}"
+					styleClass="hangImage" />
+			</p:panel>
+		</h:form>
+		
+		
+	</h:panelGrid>
+	</p:panel>
+</ui:composition>

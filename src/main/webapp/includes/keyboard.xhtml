@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<!--  
+ * 
+ * @author Dann - Dangelo Santana
+ * @professor Lounis Zaidi
+ * @subject OPJE - v11-Project2005-0902
+ *
+ */-->
+	
+	<p:panel>
+	
+		<h:panelGrid columns="10" id="mykb1" styleClass="centered">
+			<p:commandButton value="Q" actionListener="#{MBhangman.playletter('Q')}"  disabled="#{MBhangman.btQ}"  update="@all" />
+			<p:commandButton value="W" actionListener="#{MBhangman.playletter('W')}"  disabled="#{MBhangman.btW}"  update="@all"/>
+			<p:commandButton value="E" actionListener="#{MBhangman.playletter('E')}"  disabled="#{MBhangman.btE}"  update="@all"/>
+			<p:commandButton value="R" actionListener="#{MBhangman.playletter('R')}"  disabled="#{MBhangman.btR}"  update="@all"/>
+			<p:commandButton value="T" actionListener="#{MBhangman.playletter('T')}"  disabled="#{MBhangman.btT}"  update="@all"/>
+			<p:commandButton value="Y" actionListener="#{MBhangman.playletter('Y')}"  disabled="#{MBhangman.btY}"  update="@all"/>
+			<p:commandButton value="U" actionListener="#{MBhangman.playletter('U')}"  disabled="#{MBhangman.btU}"  update="@all"/>
+			<p:commandButton value="I" actionListener="#{MBhangman.playletter('I')}"  disabled="#{MBhangman.btI}"  update="@all"/>
+			<p:commandButton value="O" actionListener="#{MBhangman.playletter('O')}"  disabled="#{MBhangman.btO}"  update="@all"/>
+			<p:commandButton value="P" actionListener="#{MBhangman.playletter('P')}"  disabled="#{MBhangman.btP}"  update="@all"/>
+		</h:panelGrid>
+
+		<h:panelGrid columns="9" id="mykb2" styleClass="centered">
+			<p:commandButton value="A" actionListener="#{MBhangman.playletter('A')}"  disabled="#{MBhangman.btA}"  update="@all"/>
+			<p:commandButton value="S" actionListener="#{MBhangman.playletter('S')}"  disabled="#{MBhangman.btS}"  update="@all"/>
+			<p:commandButton value="D" actionListener="#{MBhangman.playletter('D')}"  disabled="#{MBhangman.btD}"  update="@all"/>
+			<p:commandButton value="F" actionListener="#{MBhangman.playletter('F')}"  disabled="#{MBhangman.btF}"  update="@all"/>
+			<p:commandButton value="G" actionListener="#{MBhangman.playletter('G')}"  disabled="#{MBhangman.btG}"  update="@all"/>
+			<p:commandButton value="H" actionListener="#{MBhangman.playletter('H')}"  disabled="#{MBhangman.btH}"  update="@all"/>
+			<p:commandButton value="J" actionListener="#{MBhangman.playletter('J')}"  disabled="#{MBhangman.btJ}"  update="@all"/>
+			<p:commandButton value="K" actionListener="#{MBhangman.playletter('K')}"  disabled="#{MBhangman.btK}"  update="@all"/>
+			<p:commandButton value="L" actionListener="#{MBhangman.playletter('L')}"  disabled="#{MBhangman.btL}"  update="@all"/>
+		</h:panelGrid>
+
+		<h:panelGrid columns="7" id="mykb3" styleClass="centered">
+			<p:commandButton value="Z" actionListener="#{MBhangman.playletter('Z')}"  disabled="#{MBhangman.btZ}"  update="@all"/>
+			<p:commandButton value="X" actionListener="#{MBhangman.playletter('X')}"  disabled="#{MBhangman.btX}"  update="@all"/>
+			<p:commandButton value="C" actionListener="#{MBhangman.playletter('C')}"  disabled="#{MBhangman.btC}"  update="@all"/>
+			<p:commandButton value="V" actionListener="#{MBhangman.playletter('V')}"  disabled="#{MBhangman.btV}"  update="@all"/>
+			<p:commandButton value="B" actionListener="#{MBhangman.playletter('B')}"  disabled="#{MBhangman.btB}"  update="@all"/>
+			<p:commandButton value="N" actionListener="#{MBhangman.playletter('N')}"  disabled="#{MBhangman.btN}"  update="@all"/>
+			<p:commandButton value="M" actionListener="#{MBhangman.playletter('M')}"  disabled="#{MBhangman.btM}"  update="@all"/>
+		</h:panelGrid>
+
+</p:panel>
+</ui:composition>

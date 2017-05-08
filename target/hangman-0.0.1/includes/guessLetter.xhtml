@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<!--  
+ * 
+ * @author Dann - Dangelo Santana
+ * @professor Lounis Zaidi
+ * @subject OPJE - v11-Project2005-0902
+ *
+ */-->
+	
+	
+	<h:panelGrid columns="15" id="mygrid">
+		<p:inputText size="1" maxlength="1" id="bx1" value="#{MBhangman.l1}" styleClass="txb"/>
+		<p:inputText size="1" maxlength="1" id="bx2" value="#{MBhangman.l2}" styleClass="txb"/>
+		<p:inputText size="1" maxlength="1" id="bx3" value="#{MBhangman.l3}" styleClass="txb" rendered="#{MBhangman.l3st}"/>
+		<p:inputText size="1" maxlength="1" id="bx4" value="#{MBhangman.l4}" styleClass="txb" rendered="#{MBhangman.l4st}"/>
+		<p:inputText size="1" maxlength="1" id="bx5" value="#{MBhangman.l5}" styleClass="txb" rendered="#{MBhangman.l5st}"/>
+		<p:inputText size="1" maxlength="1" id="bx6" value="#{MBhangman.l6}" styleClass="txb" rendered="#{MBhangman.l6st}"/>
+		<p:inputText size="1" maxlength="1" id="bx7" value="#{MBhangman.l7}" styleClass="txb" rendered="#{MBhangman.l7st}"/>
+		<p:inputText size="1" maxlength="1" id="bx8" value="#{MBhangman.l8}" styleClass="txb" rendered="#{MBhangman.l8st}"/>
+		<p:inputText size="1" maxlength="1" id="bx9" value="#{MBhangman.l9}" styleClass="txb" rendered="#{MBhangman.l9st}"/>
+		<p:inputText size="1" maxlength="1" id="bx10" value="#{MBhangman.l10}" styleClass="txb" rendered="#{MBhangman.l10st}" />
+	</h:panelGrid>	
+</ui:composition>
